@@ -2,6 +2,9 @@
 " OceanicNext
 " Author: Mike Hartington
 " ===============================================================
+" Modified by, Palash Bauri
+" For better comment color
+" ===============================================================
 
 " {{{ Setup
   set background=dark
@@ -44,7 +47,7 @@
   let s:brown  = ['#ab7967', '137']
   let s:white  = ['#ffffff', '15']
   let s:none   = ['NONE',    'NONE']
-
+  let s:comment = ['#f3ff9c' , '204']
 " }}}
 " {{{ Highlight function
 function! s:hi(group, fg, bg, attr, attrsp)
@@ -119,7 +122,7 @@ endfunction
   " Standard syntax highlighting
   call s:hi('Boolean',                            s:orange, '',       '',          '')
   call s:hi('Character',                          s:red,    '',       '',          '')
-  call s:hi('Comment',                            s:base03, '',       s:italic,    '')
+  call s:hi('Comment',                            s:comment, '',       s:italic,    '')
   call s:hi('Conditional',                        s:purple, '',       '',          '')
   call s:hi('Constant',                           s:orange, '',       '',          '')
   call s:hi('Define',                             s:purple, '',       '',          '')
@@ -365,4 +368,3 @@ else
      \]
 
 endif
-
